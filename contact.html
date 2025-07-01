@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contacto | CRO Expertos</title>
+  <meta name="description" content="Contacta con CRO Expertos para solicitar información, presupuestos o resolver tus dudas sobre optimización de conversión.">
+  <link rel="canonical" href="https://bz3.github.io/CRO/contact.html">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <nav aria-label="Navegación principal">
+    <ul style="display:flex;gap:2rem;justify-content:center;list-style:none;padding:1rem 0 0 0;margin:0;">
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="about.html">Sobre Nosotros</a></li>
+      <li><a href="services.html">Servicios</a></li>
+      <li><a href="contact.html">Contacto</a></li>
+      <li><a href="careers.html">Trabaja con Nosotros</a></li>
+      <li><a href="faq.html">FAQs</a></li>
+      <li><a href="blog.html">Blog</a></li>
+    </ul>
+  </nav>
+  <header>
+    <h1>Contacto</h1>
+    <p>¿Tienes dudas o quieres solicitar tu auditoría CRO? Escríbenos y te responderemos en menos de 24h.</p>
+  </header>
+  <main>
+    <section>
+      <form id="contactForm" style="max-width:500px;margin:auto;">
+        <label for="nombre">Nombre</label>
+        <input type="text" id="nombre" name="nombre" required>
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+        <label for="mensaje">Mensaje</label>
+        <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+        <button type="submit">Enviar</button>
+      </form>
+      <div id="contactSuccess" class="hidden" role="status">¡Gracias! Hemos recibido tu mensaje.</div>
+    </section>
+    <section>
+      <h2>Datos de contacto</h2>
+      <ul>
+        <li>Email: <a href="mailto:bizente@gmail.com">bizente@gmail.com</a></li>
+        <li>Teléfono: <a href="tel:+34600000000">+34 600 000 000</a></li>
+        <li>LinkedIn: <a href="https://www.linkedin.com/company/cro-expertos/" target="_blank">CRO Expertos</a></li>
+      </ul>
+    </section>
+  </main>
+  <footer>
+    <p>© 2024 CRO Expertos. <a href="index.html">Volver al inicio</a></p>
+  </footer>
+  <script>
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      this.classList.add('hidden');
+      document.getElementById('contactSuccess').classList.remove('hidden');
+    });
+  </script>
+</body>
+</html> 

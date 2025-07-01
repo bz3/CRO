@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trabaja con Nosotros | CRO Expertos</title>
+  <meta name="description" content="Únete al equipo de CRO Expertos. Buscamos talento en CRO, UX, analítica y marketing digital.">
+  <link rel="canonical" href="https://bz3.github.io/CRO/careers.html">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <nav aria-label="Navegación principal">
+    <ul style="display:flex;gap:2rem;justify-content:center;list-style:none;padding:1rem 0 0 0;margin:0;">
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="about.html">Sobre Nosotros</a></li>
+      <li><a href="services.html">Servicios</a></li>
+      <li><a href="contact.html">Contacto</a></li>
+      <li><a href="careers.html">Trabaja con Nosotros</a></li>
+      <li><a href="faq.html">FAQs</a></li>
+      <li><a href="blog.html">Blog</a></li>
+    </ul>
+  </nav>
+  <header>
+    <h1>Trabaja con Nosotros</h1>
+    <p>¿Te apasiona el CRO, la analítica o el marketing digital? ¡Queremos conocerte!</p>
+  </header>
+  <main>
+    <section>
+      <h2>Envíanos tu candidatura</h2>
+      <form id="careerForm" style="max-width:500px;margin:auto;">
+        <label for="nombre">Nombre</label>
+        <input type="text" id="nombre" name="nombre" required>
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+        <label for="perfil">Perfil profesional</label>
+        <input type="text" id="perfil" name="perfil" required>
+        <label for="mensaje">Cuéntanos por qué quieres unirte</label>
+        <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+        <button type="submit">Enviar candidatura</button>
+      </form>
+      <div id="careerSuccess" class="hidden" role="status">¡Gracias! Revisaremos tu perfil y te contactaremos.</div>
+    </section>
+    <section>
+      <h2>¿Qué perfiles buscamos?</h2>
+      <ul>
+        <li>Especialistas en CRO y analítica digital</li>
+        <li>Diseñadores UX/UI</li>
+        <li>Desarrolladores web</li>
+        <li>Copywriters y marketers digitales</li>
+      </ul>
+    </section>
+  </main>
+  <footer>
+    <p>© 2024 CRO Expertos. <a href="index.html">Volver al inicio</a></p>
+  </footer>
+  <script>
+    document.getElementById('careerForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      this.classList.add('hidden');
+      document.getElementById('careerSuccess').classList.remove('hidden');
+    });
+  </script>
+</body>
+</html> 
