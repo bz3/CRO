@@ -1,94 +1,164 @@
 body {
-  font-family: 'Segoe UI', Arial, sans-serif;
-  background: #f8fafc;
-  color: #222;
+  font-family: 'SF Pro Display', 'Segoe UI', Arial, sans-serif;
+  background: linear-gradient(135deg, #f5f6fa 0%, #e9ebee 100%);
+  color: #1d1d1f;
   margin: 0;
   padding: 0;
 }
 header {
-  background: #0a2540;
-  color: #fff;
-  padding: 2rem 1rem 1rem 1rem;
+  background: transparent;
+  color: #1d1d1f;
+  padding: 3rem 1rem 2rem 1rem;
   text-align: center;
 }
 header h1 {
-  margin: 0 0 0.5rem 0;
-  font-size: 2.2rem;
+  margin: 0 0 1rem 0;
+  font-size: 2.8rem;
+  font-weight: 700;
+  letter-spacing: -1px;
 }
 header p {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
+  color: #6e6e73;
+  margin-bottom: 0;
 }
 main {
-  max-width: 600px;
-  margin: 2rem auto;
-  padding: 1rem;
+  max-width: 700px;
+  margin: 2.5rem auto;
+  padding: 2rem 2.5rem;
   background: #fff;
-  border-radius: 12px;
-  box-shadow: 0 2px 16px rgba(10,37,64,0.07);
+  border-radius: 24px;
+  box-shadow: 0 8px 32px rgba(60,60,67,0.08);
 }
 .lead-form-section {
-  margin-bottom: 2rem;
+  margin-bottom: 2.5rem;
+}
+.lead-form-section h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 1.2rem;
 }
 form {
   display: flex;
   flex-direction: column;
-  gap: 0.8rem;
+  gap: 1.1rem;
 }
 input, textarea {
-  padding: 0.7rem;
-  border: 1px solid #cbd5e1;
-  border-radius: 6px;
-  font-size: 1rem;
+  padding: 1rem;
+  border: 1px solid #d2d2d7;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  background: #f5f6fa;
+  transition: border 0.2s;
+}
+input:focus, textarea:focus {
+  border: 1.5px solid #0071e3;
+  outline: none;
+  background: #fff;
 }
 button[type="submit"] {
-  background: #0a2540;
+  background: linear-gradient(90deg, #0071e3 0%, #2997ff 100%);
   color: #fff;
   border: none;
-  padding: 0.9rem;
-  border-radius: 6px;
-  font-size: 1.1rem;
+  padding: 1rem;
+  border-radius: 12px;
+  font-size: 1.2rem;
+  font-weight: 600;
   cursor: pointer;
-  transition: background 0.2s;
+  box-shadow: 0 2px 8px rgba(0,113,227,0.08);
+  transition: background 0.2s, transform 0.1s;
 }
 button[type="submit"]:hover {
-  background: #174ea6;
+  background: linear-gradient(90deg, #2997ff 0%, #0071e3 100%);
+  transform: translateY(-2px) scale(1.03);
 }
 #formSuccess {
-  color: #0a2540;
-  background: #d1fae5;
-  border: 1px solid #10b981;
-  border-radius: 6px;
-  padding: 1rem;
-  margin-top: 1rem;
+  color: #0071e3;
+  background: #e7f3ff;
+  border: 1px solid #b6e0fe;
+  border-radius: 12px;
+  padding: 1.2rem;
+  margin-top: 1.2rem;
   text-align: center;
+  font-size: 1.1rem;
 }
 .hidden {
   display: none;
 }
 .benefits, .process, .testimonials {
-  margin-bottom: 2rem;
+  margin-bottom: 2.5rem;
+}
+.benefits h2, .process h2, .testimonials h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #1d1d1f;
+  margin-bottom: 0.7rem;
 }
 .benefits ul, .process ol {
   margin: 0 0 0 1.2rem;
   padding: 0;
+  color: #444;
+  font-size: 1.08rem;
 }
 .testimonials blockquote {
-  background: #f1f5f9;
-  border-left: 4px solid #0a2540;
-  margin: 1rem 0;
-  padding: 1rem;
-  border-radius: 6px;
+  background: #f5f6fa;
+  border-left: 4px solid #0071e3;
+  margin: 1.2rem 0;
+  padding: 1.2rem 1.5rem;
+  border-radius: 12px;
   font-style: italic;
+  color: #333;
+  box-shadow: 0 2px 8px rgba(60,60,67,0.04);
 }
 .testimonials span {
   display: block;
   margin-top: 0.5rem;
-  color: #555;
-  font-size: 0.95rem;
+  color: #6e6e73;
+  font-size: 1rem;
 }
 footer {
   text-align: center;
-  color: #888;
-  font-size: 0.95rem;
-  margin: 2rem 0 1rem 0;
+  color: #b0b0b3;
+  font-size: 1rem;
+  margin: 3rem 0 1.5rem 0;
+}
+
+/* Acordeón FAQ */
+.accordion {
+  max-width: 600px;
+  margin: 2rem auto;
+}
+.accordion-item {
+  margin-bottom: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(60,60,67,0.04);
+  background: #f8fafc;
+}
+.accordion-title {
+  width: 100%;
+  text-align: left;
+  background: none;
+  border: none;
+  font-size: 1.15rem;
+  font-weight: 600;
+  padding: 1.1rem 1.2rem;
+  cursor: pointer;
+  border-radius: 12px 12px 0 0;
+  color: #0071e3;
+  transition: background 0.2s;
+}
+.accordion-title:hover {
+  background: #e7f3ff;
+}
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  background: #fff;
+  padding: 0 1.2rem;
+  border-radius: 0 0 12px 12px;
+}
+.accordion-content p {
+  margin: 1rem 0;
+  color: #333;
 } 

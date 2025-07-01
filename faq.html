@@ -26,24 +26,42 @@
   </header>
   <main>
     <section>
-      <h2>¿Qué es el CRO?</h2>
-      <p>El CRO (Conversion Rate Optimization) es el proceso de mejorar la tasa de conversión de una web o app.</p>
-    </section>
-    <section>
-      <h2>¿En qué consiste la auditoría gratuita?</h2>
-      <p>Analizamos tu web, embudo y experiencia de usuario para detectar oportunidades de mejora y te enviamos un informe personalizado.</p>
-    </section>
-    <section>
-      <h2>¿Para qué tipo de negocios es útil el CRO?</h2>
-      <p>Para ecommerce, SaaS, negocios digitales, landing pages y cualquier web que busque más ventas o leads.</p>
-    </section>
-    <section>
-      <h2>¿Cuánto cuesta el servicio?</h2>
-      <p>La auditoría inicial es gratuita. Los servicios avanzados se presupuestan a medida.</p>
+      <div class="accordion">
+        <div class="accordion-item">
+          <button class="accordion-title">¿Qué es el CRO?</button>
+          <div class="accordion-content"><p>El CRO (Conversion Rate Optimization) es el proceso de mejorar la tasa de conversión de una web o app.</p></div>
+        </div>
+        <div class="accordion-item">
+          <button class="accordion-title">¿En qué consiste la auditoría gratuita?</button>
+          <div class="accordion-content"><p>Analizamos tu web, embudo y experiencia de usuario para detectar oportunidades de mejora y te enviamos un informe personalizado.</p></div>
+        </div>
+        <div class="accordion-item">
+          <button class="accordion-title">¿Para qué tipo de negocios es útil el CRO?</button>
+          <div class="accordion-content"><p>Para ecommerce, SaaS, negocios digitales, landing pages y cualquier web que busque más ventas o leads.</p></div>
+        </div>
+        <div class="accordion-item">
+          <button class="accordion-title">¿Cuánto cuesta el servicio?</button>
+          <div class="accordion-content"><p>La auditoría inicial es gratuita. Los servicios avanzados se presupuestan a medida.</p></div>
+        </div>
+      </div>
     </section>
   </main>
   <footer>
     <p>© 2024 CRO Expertos. <a href="index.html">Volver al inicio</a></p>
   </footer>
+  <script>
+    document.querySelectorAll('.accordion-title').forEach(btn => {
+      btn.addEventListener('click', function() {
+        const content = this.nextElementSibling;
+        const isOpen = content.style.maxHeight;
+        document.querySelectorAll('.accordion-content').forEach(c => {
+          c.style.maxHeight = null;
+        });
+        if (!isOpen) {
+          content.style.maxHeight = content.scrollHeight + 'px';
+        }
+      });
+    });
+  </script>
 </body>
 </html> 
