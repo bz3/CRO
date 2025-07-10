@@ -122,101 +122,140 @@ footer {
   font-size: 1rem;
   margin: 3rem 0 1.5rem 0;
 }
-
-/* Acordeón FAQ */
-.accordion {
-  max-width: 600px;
-  margin: 2rem auto;
-}
-.accordion-item {
-  margin-bottom: 1rem;
-  border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(60,60,67,0.04);
-  background: #f8fafc;
-}
-.accordion-title {
-  width: 100%;
-  text-align: left;
-  background: none;
-  border: none;
-  font-size: 1.15rem;
-  font-weight: 600;
-  padding: 1.1rem 1.2rem;
-  cursor: pointer;
-  border-radius: 12px 12px 0 0;
-  color: #0071e3;
-  transition: background 0.2s;
-}
-.accordion-title:hover {
-  background: #e7f3ff;
-}
-.accordion-content {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.3s ease;
-  background: #fff;
-  padding: 0 1.2rem;
-  border-radius: 0 0 12px 12px;
-}
-.accordion-content p {
-  margin: 1rem 0;
-  color: #333;
-}
-
-/* Menú sticky inspirado en natzir.com */
-.main-nav {
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  background: #fff;
-  box-shadow: 0 2px 16px rgba(60,60,67,0.07);
-  width: 100%;
+/* Footer atractivo tipo natzir.com */
+.footer-cro {
+  position: relative;
+  background: #181e1b;
+  color: #f3f3f3;
   padding: 0;
+  margin-top: 4rem;
+  overflow: hidden;
 }
-.nav-content {
+.footer-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background-image: radial-gradient(rgba(255,255,255,0.07) 1px, transparent 18px);
+  background-size: 40px 40px;
+  pointer-events: none;
+}
+.footer-content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
   max-width: 1100px;
   margin: 0 auto;
+  padding: 3rem 2rem 2rem 2rem;
+}
+.footer-brand {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding: 0.5rem 2rem;
+  gap: 1.2rem;
+  min-width: 260px;
 }
-.nav-logo {
-  font-size: 1.35rem;
+.footer-logo {
+  font-size: 2.5rem;
+  color: #6ee7b7;
+  font-weight: bold;
+  margin-right: 0.5rem;
+}
+.footer-title {
+  font-size: 1.4rem;
   font-weight: 700;
-  color: #0a2540;
-  text-decoration: none;
-  letter-spacing: -1px;
-  padding: 0.3rem 0;
+  color: #6ee7b7;
+  margin-bottom: 0.2rem;
 }
-.nav-links {
+.footer-desc {
+  font-size: 1.05rem;
+  color: #e5e5e5;
+  margin-bottom: 0.5rem;
+}
+.footer-links {
   display: flex;
-  gap: 2rem;
-  list-style: none;
-  margin: 0;
-  padding: 0;
+  gap: 3rem;
+  flex-wrap: wrap;
 }
-.nav-links a {
-  color: #1d1d1f;
-  text-decoration: none;
-  font-weight: 500;
+.footer-links > div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  min-width: 120px;
+}
+.footer-links-title {
   font-size: 1.08rem;
-  padding: 0.5rem 0.2rem;
-  border-bottom: 2px solid transparent;
-  transition: color 0.2s, border-bottom 0.2s;
+  font-weight: 600;
+  color: #6ee7b7;
+  margin-bottom: 0.5rem;
 }
-.nav-links a:hover {
-  color: #0071e3;
-  border-bottom: 2px solid #0071e3;
+.footer-links a {
+  color: #f3f3f3;
+  text-decoration: none;
+  font-size: 1.05rem;
+  transition: color 0.2s;
 }
-@media (max-width: 700px) {
-  .nav-content {
+.footer-links a:hover {
+  color: #6ee7b7;
+}
+.footer-social {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: flex-start;
+}
+.footer-social-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: 2px solid #6ee7b7;
+  width: 44px;
+  height: 44px;
+  margin-right: 0.5rem;
+  margin-top: 0.2rem;
+  background: rgba(110,231,183,0.04);
+  transition: background 0.2s, border 0.2s;
+}
+.footer-social-icon:hover {
+  background: #6ee7b7;
+  border-color: #fff;
+}
+.footer-social-icon svg {
+  display: block;
+}
+.footer-copy {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  color: #b0b0b3;
+  font-size: 1rem;
+  padding: 1.5rem 0 1rem 0;
+  border-top: 1px solid #232a27;
+  margin-top: 1.5rem;
+}
+@media (max-width: 900px) {
+  .footer-content {
     flex-direction: column;
     align-items: flex-start;
-    padding: 0.5rem 1rem;
+    gap: 2.5rem;
+    padding: 2.5rem 1rem 1.5rem 1rem;
   }
-  .nav-links {
+  .footer-links {
+    gap: 2rem;
+  }
+}
+@media (max-width: 600px) {
+  .footer-content {
+    padding: 2rem 0.5rem 1rem 0.5rem;
+  }
+  .footer-links {
     gap: 1.2rem;
-    font-size: 1rem;
+  }
+  .footer-brand {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.7rem;
   }
 } 
